@@ -79,6 +79,13 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
+      
+    - name: Update feeds passwall2
+      run: cd openwrt && ./scripts/feeds update passwall2      
+
+    - name: Install feeds passwall2
+      run: cd openwrt && ./scripts/feeds install -a -p passwall2      
+
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
