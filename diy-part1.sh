@@ -13,13 +13,14 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-# Add a feed source
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # Add a feed source
 echo >> feeds.conf.default
 echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+# Add a feed source
+echo 'src-git adguardhome https://github.com/kongfl888/luci-app-adguardhome.git' >> feeds.conf.default
+echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git ' >> feeds.conf.default
+
 
 # Add ADGuardHome source
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
